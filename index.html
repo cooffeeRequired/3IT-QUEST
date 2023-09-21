@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" refer></script>
+    <script src="/db/wasm.js" refer></script>
+    <script src="index.js" refer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">
+            <h1>JSON Data</h1>
+            <div class="buttons">
+                <button type="button" class="loadFrom disabled" id="load" onclick="retrieveDataFromDB()">from
+                    SQL</button>
+                <button class="export" onclick="exportSelected()" type="button" id="export">export selected</button>
+                <button type="button" id="import">import data</button>
+                <button class="save_db" type="button" id="save to db" onclick="sendToDB(this)">send to db</button>
+            </div>
+            <div id="dataTable">
+                <h3>nemáte žádné záznamy</h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

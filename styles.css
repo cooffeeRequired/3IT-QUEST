@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+div.buttons {
+    display: flex;
+    align-items: center;
+}
+
+button.save_db {
+    background-color: #159e1e;
+}
+button.save_db:hover {
+    background-color: #0b6e0b;
+}
+
+button.export {
+    background-color: #555;
+}
+button.export:hover {
+    background-color: #233;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(7, 7, 7, 0.5);
+    overflow: hidden;
+}
+
+.loadFrom {
+    background-color: rgba(91, 184, 20, 0.639);
+    color: #040303;
+}
+
+.loadFrom:hover {
+    background-color: rgba(91, 184, 20, 0.8);
+    color: #040303;
+}
+
+.loadFrom.disabled {
+    background-color: rgba(224, 11, 11, 0.531);
+    color: #040303;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.sending {
+    background-color: rgb(202, 180, 13) !important;
+    color: black;
+    pointer-events: none;
+    cursor: progress;
+    transition: all 0.3s ease-in-out;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 20%;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#dataTable {
+    margin-top: 40px !important;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 0.5rem;
+    margin: 1rem;
+    overflow: auto;
+    max-height: 70vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+tbody tr {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2;
+    color: #007bff;
+    cursor: pointer;
+}
+
+h3 {
+    color: #555;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Styl pro 'thead' */
+thead {
+    position: sticky;
+    top: -10px;
+    background-color: red; /* Změněna barva pozadí na červenou */
+    z-index: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Zvýraznění řádku pomocí třídy checked */
+tbody tr.checked {
+    background-color: #4591e2;
+    color: #fff;
+}
